@@ -1,75 +1,64 @@
-import { Badge } from "@/components/ui/badge";
-import { 
-  Shield
-} from "lucide-react";
-
 export const HeroSection = () => {
-
   return (
     <main 
       id="main-content"
-      className="relative min-h-screen bg-gradient-hero overflow-hidden"
+      className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden"
       role="banner"
     >
       {/* Background Effects */}
       <div 
-        className="absolute inset-0 opacity-20 bg-[length:60px_60px]" 
+        className="absolute inset-0 opacity-10" 
         aria-hidden="true"
         style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+          backgroundImage: `radial-gradient(circle at 25% 25%, hsl(var(--primary)) 0%, transparent 50%), 
+                           radial-gradient(circle at 75% 75%, hsl(var(--n8n-purple)) 0%, transparent 50%)`
         }}
-      >
-      </div>
+      />
       
       <div className="relative z-10 container mx-auto px-6 py-20 lg:py-32">
-        {/* Main Hero Content */}
-        <div className="text-center min-h-screen flex flex-col justify-center animate-fade-in">
-          <div className="flex justify-center mb-8">
-            <Badge 
-              variant="secondary" 
-              className="px-4 py-2 text-sm bg-background/20 backdrop-blur-sm border-white/20 font-medium"
-              role="status"
-              aria-label="Technology badge"
-            >
-              <Shield className="h-4 w-4 mr-2" aria-hidden="true" />
-              Powered by Advanced AI & LLM Technology
-            </Badge>
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+          {/* Left Side - Content */}
+          <div className="space-y-8 animate-fade-in">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-heading leading-tight">
+              <span className="text-white block">Supercharge Your</span>
+              <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent block">
+                Pentesting
+              </span>
+              <span className="text-white block">Experience</span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-2xl">
+              Transform your penetration testing workflow with enhanced automation, 
+              AI-powered analysis tools, and intelligent vulnerability assessment capabilities.
+            </p>
           </div>
-          
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-heading text-white mb-8 leading-tight max-w-5xl mx-auto">
-            Automate Network
-            <br />
-            <span className="bg-gradient-accent bg-clip-text text-transparent">
-              Penetration Testing
-            </span>
-          </h1>
-          
-          <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed font-body">
-            Create intelligent pentesting workflows that automate reconnaissance, 
-            vulnerability analysis, and reporting using cutting-edge LLM technology
-          </p>
 
-          {/* Stats */}
-          <div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mt-12"
-            role="region"
-            aria-label="Performance statistics"
-          >
-            {[
-              { number: "50K+", label: "Security Tests Automated", description: "Over fifty thousand security tests automated to date" },
-              { number: "99.9%", label: "Accuracy Rate", description: "Ninety-nine point nine percent accuracy rate in detection" },
-              { number: "10x", label: "Faster Than Manual Testing", description: "Ten times faster than traditional manual testing methods" }
-            ].map((stat, index) => (
-              <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
-                <div 
-                  className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading mb-3 bg-gradient-accent bg-clip-text text-transparent"
-                  aria-label={stat.description}
-                >
-                  {stat.number}
+          {/* Right Side - Product Pictures Space */}
+          <div className="relative animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 min-h-[500px] flex items-center justify-center">
+              <div className="text-center space-y-4">
+                <div className="w-24 h-24 bg-gradient-to-r from-pink-400 to-purple-400 rounded-2xl mx-auto flex items-center justify-center">
+                  <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
                 </div>
-                <p className="text-white/80 font-medium text-sm sm:text-base">{stat.label}</p>
+                <h3 className="text-2xl font-semibold text-white">Product Showcase</h3>
+                <p className="text-white/60 max-w-sm mx-auto">
+                  Interactive demonstrations and workflow visualizations will be displayed here
+                </p>
+                <div className="grid grid-cols-2 gap-4 mt-8">
+                  {[1, 2, 3, 4].map((item) => (
+                    <div key={item} className="bg-white/5 border border-white/10 rounded-lg p-4 h-20 flex items-center justify-center">
+                      <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-purple-400 rounded opacity-60"></div>
+                    </div>
+                  ))}
+                </div>
               </div>
-            ))}
+            </div>
+            
+            {/* Floating elements for visual interest */}
+            <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full opacity-20 animate-float"></div>
+            <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full opacity-10 animate-float" style={{ animationDelay: '1s' }}></div>
           </div>
         </div>
       </div>

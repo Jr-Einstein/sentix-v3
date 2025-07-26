@@ -154,12 +154,12 @@ export const ChatUpload = () => {
           </Button>
 
           {/* Message Input */}
-          <div className="flex-1 min-h-[3rem]">
+          <div className="flex-1 min-h-[3rem] led-strip-glow">
             <Input
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Upload your questionnaire or ask about penetration testing..."
-              className="min-h-[3rem] text-base border-0 bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 text-foreground placeholder:text-muted-foreground resize-none animate-glow-flowing"
+              className="min-h-[3rem] text-base border-0 bg-background/80 focus-visible:ring-0 focus-visible:ring-offset-0 text-foreground placeholder:text-muted-foreground resize-none relative z-10"
               onKeyDown={(e) => {
                 if (e.key === 'Enter' && !e.shiftKey) {
                   e.preventDefault();
