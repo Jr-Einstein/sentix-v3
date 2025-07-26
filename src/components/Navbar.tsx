@@ -56,60 +56,60 @@ export const Navbar = () => {
         {/* Logo */}
         <Link 
           to="/" 
-          className="flex items-center space-x-3 hover:opacity-90 transition-opacity duration-200"
+          className="flex items-center space-x-4 hover:opacity-90 transition-all duration-200"
           aria-label="Go to homepage"
         >
-          <div className="p-2 bg-gradient-hero rounded-lg shadow-glow">
-            <Shield className="h-6 sm:h-8 w-6 sm:w-8 text-white" aria-hidden="true" />
+          <div className="p-2.5 bg-gradient-hero rounded-xl shadow-glow">
+            <Shield className="h-7 sm:h-8 w-7 sm:w-8 text-white" aria-hidden="true" />
           </div>
           <div>
-            <h1 className="text-xl sm:text-2xl font-bold font-heading bg-gradient-to-r from-[#FF6B6B] via-[#FF73B3] to-[#7B68EE] bg-clip-text text-transparent">
+            <h1 className="text-xl sm:text-2xl font-black font-heading bg-gradient-to-r from-[#FF6B6B] via-[#FF73B3] to-[#7B68EE] bg-clip-text text-transparent">
               Sentix AI
             </h1>
-            <p className="text-xs text-muted-foreground hidden sm:block">Network Pentesting Automation</p>
+            <p className="text-xs text-muted-foreground/80 hidden sm:block">Network Pentesting Automation</p>
           </div>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8" role="navigation">
+        <div className="hidden md:flex items-center space-x-10" role="navigation">
           <Link 
             to="/dashboard" 
-            className={`text-white/90 hover:text-white focus:text-white transition-all duration-200 font-medium text-sm py-2 px-3 rounded-md hover:bg-white/10 relative group ${
-              location.pathname === '/dashboard' ? 'text-white' : ''
+            className={`text-white/90 hover:text-white focus:text-white transition-all duration-200 font-semibold text-sm py-2.5 px-4 rounded-lg hover:bg-white/10 relative group ${
+              location.pathname === '/dashboard' ? 'text-white bg-white/5' : ''
             }`}
             aria-label="Access the dashboard"
           >
             Dashboard
-            <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
+            <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
           </Link>
           <Link 
             to="/features" 
-            className={`text-white/90 hover:text-white focus:text-white transition-all duration-200 font-medium text-sm py-2 px-3 rounded-md hover:bg-white/10 relative group ${
-              location.pathname === '/features' ? 'text-white' : ''
+            className={`text-white/90 hover:text-white focus:text-white transition-all duration-200 font-semibold text-sm py-2.5 px-4 rounded-lg hover:bg-white/10 relative group ${
+              location.pathname === '/features' ? 'text-white bg-white/5' : ''
             }`}
             aria-label="View features"
           >
             Features
-            <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
+            <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
           </Link>
           <Link 
             to="/pricing" 
-            className={`text-white/90 hover:text-white focus:text-white transition-all duration-200 font-medium text-sm py-2 px-3 rounded-md hover:bg-white/10 relative group ${
-              location.pathname === '/pricing' ? 'text-white' : ''
+            className={`text-white/90 hover:text-white focus:text-white transition-all duration-200 font-semibold text-sm py-2.5 px-4 rounded-lg hover:bg-white/10 relative group ${
+              location.pathname === '/pricing' ? 'text-white bg-white/5' : ''
             }`}
             aria-label="View pricing"
           >
             Pricing
-            <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
+            <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
           </Link>
         </div>
 
         {/* Auth Buttons */}
-        <div className="hidden md:flex items-center space-x-3">
+        <div className="hidden md:flex items-center space-x-4">
           <Button 
             variant="ghost" 
             size="sm" 
-            className="font-medium text-sm px-4 py-2 h-auto min-h-touch text-white/90 hover:text-white hover:bg-white/10 transition-all duration-200"
+            className="font-semibold text-sm px-5 py-2.5 h-auto min-h-touch text-white/90 hover:text-white hover:bg-white/15 transition-all duration-200 rounded-lg"
             aria-label="Sign in to your account"
           >
             <LogIn className="h-4 w-4 mr-2" aria-hidden="true" />
@@ -117,7 +117,7 @@ export const Navbar = () => {
           </Button>
           <Button 
             size="sm" 
-            className="font-semibold text-sm px-6 py-2 h-auto min-h-touch bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105"
+            className="font-bold text-sm px-8 py-2.5 h-auto min-h-touch bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105 rounded-lg"
             aria-label="Get started with Sentix AI"
           >
             Get Started
