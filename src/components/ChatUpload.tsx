@@ -159,7 +159,7 @@ export const ChatUpload = () => {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Upload your questionnaire or ask about penetration testing..."
-              className="min-h-[3rem] text-base border-0 bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 text-foreground placeholder:text-muted-foreground resize-none"
+              className="min-h-[3rem] text-base border-0 bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 text-foreground placeholder:text-muted-foreground resize-none animate-glow-flowing"
               onKeyDown={(e) => {
                 if (e.key === 'Enter' && !e.shiftKey) {
                   e.preventDefault();

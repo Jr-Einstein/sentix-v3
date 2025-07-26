@@ -13,8 +13,8 @@ const Index = () => {
       <div className="pt-20"> {/* Add padding top for fixed navbar */}
         <HeroSection />
         
-        {/* Visual Separator - 300px gap with wave divider */}
-        <div className="h-[300px] bg-gradient-to-b from-background via-muted/20 to-background relative">
+        {/* Visual Separator - reduced gap for better flow */}
+        <div className="h-[120px] bg-gradient-to-b from-background via-muted/20 to-background relative">
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
           </div>

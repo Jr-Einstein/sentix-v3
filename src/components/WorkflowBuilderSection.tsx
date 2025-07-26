@@ -13,19 +13,19 @@ export const WorkflowBuilderSection = () => {
   const [isPublic, setIsPublic] = useState(true);
 
   return (
-    <div className="py-20 px-4 sm:px-6 bg-muted/30">
+    <div className="py-16 px-4 sm:px-6 bg-muted/30">
       <div className="max-w-7xl mx-auto">
         {/* Transitional Header */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground mb-4">
             Ready to Build Your Workflow?
           </h2>
         </div>
 
         {/* Workflow Builder Card */}
-        <Card className="max-w-4xl mx-auto p-8 bg-card/80 backdrop-blur-md border-border">
-          <div className="mb-6 text-center">
-            <div className="flex items-center justify-center mb-4">
+        <Card className="max-w-4xl mx-auto p-6 lg:p-8 bg-card/80 backdrop-blur-md border-border">
+          <div className="mb-8 text-center">
+            <div className="flex items-center justify-center mb-6">
               <Zap className="h-8 w-8 text-orange-500 mr-3" />
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold">
                 <span className="bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
@@ -39,7 +39,7 @@ export const WorkflowBuilderSection = () => {
           </div>
           
           {/* Chat Upload Interface */}
-          <div className="mb-6">
+          <div className="mb-8">
             <ChatUpload />
           </div>
           
