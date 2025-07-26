@@ -1,9 +1,11 @@
 import { Shield, Menu, LogIn, UserPlus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <>
@@ -32,30 +34,36 @@ export const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8" role="navigation">
-          <a 
-            href="/platform" 
-            className="text-white/90 hover:text-white focus:text-white transition-all duration-200 font-medium text-sm py-2 px-3 rounded-md hover:bg-white/10 relative group"
+          <Link 
+            to="/platform" 
+            className={`text-white/90 hover:text-white focus:text-white transition-all duration-200 font-medium text-sm py-2 px-3 rounded-md hover:bg-white/10 relative group ${
+              location.pathname === '/platform' ? 'text-white' : ''
+            }`}
             aria-label="Learn about our platform"
           >
             Platform
             <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
-          </a>
-          <a 
-            href="/features" 
-            className="text-white/90 hover:text-white focus:text-white transition-all duration-200 font-medium text-sm py-2 px-3 rounded-md hover:bg-white/10 relative group"
+          </Link>
+          <Link 
+            to="/features" 
+            className={`text-white/90 hover:text-white focus:text-white transition-all duration-200 font-medium text-sm py-2 px-3 rounded-md hover:bg-white/10 relative group ${
+              location.pathname === '/features' ? 'text-white' : ''
+            }`}
             aria-label="View features"
           >
             Features
             <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
-          </a>
-          <a 
-            href="/pricing" 
-            className="text-white/90 hover:text-white focus:text-white transition-all duration-200 font-medium text-sm py-2 px-3 rounded-md hover:bg-white/10 relative group"
+          </Link>
+          <Link 
+            to="/pricing" 
+            className={`text-white/90 hover:text-white focus:text-white transition-all duration-200 font-medium text-sm py-2 px-3 rounded-md hover:bg-white/10 relative group ${
+              location.pathname === '/pricing' ? 'text-white' : ''
+            }`}
             aria-label="View pricing"
           >
             Pricing
             <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
-          </a>
+          </Link>
         </div>
 
         {/* Auth Buttons */}
@@ -101,27 +109,27 @@ export const Navbar = () => {
             aria-label="Mobile navigation"
           >
             <div className="flex flex-col space-y-1 pt-4">
-              <a 
-                href="/platform" 
+              <Link 
+                to="/platform" 
                 className="text-white/90 hover:text-white focus:text-white transition-colors font-medium px-4 py-3 rounded-md hover:bg-white/10"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Platform
-              </a>
-              <a 
-                href="/features" 
+              </Link>
+              <Link 
+                to="/features" 
                 className="text-white/90 hover:text-white focus:text-white transition-colors font-medium px-4 py-3 rounded-md hover:bg-white/10"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Features
-              </a>
-              <a 
-                href="/pricing" 
+              </Link>
+              <Link 
+                to="/pricing" 
                 className="text-white/90 hover:text-white focus:text-white transition-colors font-medium px-4 py-3 rounded-md hover:bg-white/10"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Pricing
-              </a>
+              </Link>
               <div className="flex flex-col space-y-3 pt-4 px-4">
                 <Button 
                   variant="ghost" 
