@@ -13,7 +13,7 @@ export const Navbar = () => {
       </a>
       
       <nav 
-        className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-3 bg-background/95 backdrop-blur-md border-b border-border/50"
+        className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-4 bg-violet-900/20 backdrop-blur-md border-b border-violet-500/20"
         aria-label="Main navigation"
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -33,25 +33,32 @@ export const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8" role="navigation">
           <a 
-            href="#platform" 
-            className="text-foreground hover:text-primary focus:text-primary transition-colors duration-200 font-medium text-sm py-2 px-1 rounded-md"
-            aria-label="Learn about our platform"
+            href="/workflows" 
+            className="text-white/90 hover:text-white focus:text-white transition-colors duration-200 font-medium text-sm py-2 px-1 rounded-md"
+            aria-label="View workflows"
           >
-            Platform
+            Workflows
           </a>
           <a 
-            href="#features" 
-            className="text-foreground hover:text-primary focus:text-primary transition-colors duration-200 font-medium text-sm py-2 px-1 rounded-md"
+            href="/features" 
+            className="text-white/90 hover:text-white focus:text-white transition-colors duration-200 font-medium text-sm py-2 px-1 rounded-md"
             aria-label="View features"
           >
             Features
           </a>
           <a 
-            href="#pricing" 
-            className="text-foreground hover:text-primary focus:text-primary transition-colors duration-200 font-medium text-sm py-2 px-1 rounded-md"
+            href="/pricing" 
+            className="text-white/90 hover:text-white focus:text-white transition-colors duration-200 font-medium text-sm py-2 px-1 rounded-md"
             aria-label="View pricing"
           >
             Pricing
+          </a>
+          <a 
+            href="/docs" 
+            className="text-white/90 hover:text-white focus:text-white transition-colors duration-200 font-medium text-sm py-2 px-1 rounded-md"
+            aria-label="View documentation"
+          >
+            Docs
           </a>
         </div>
 

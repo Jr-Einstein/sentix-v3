@@ -2,7 +2,7 @@ export const HeroSection = () => {
   return (
     <main 
       id="main-content"
-      className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden"
+      className="relative min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-indigo-900 overflow-hidden"
       role="banner"
     >
       {/* Background Effects */}
