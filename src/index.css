@@ -92,6 +92,7 @@ All colors MUST be HSL.
   #lovable-badge {
     display: none !important;
   }
+
   * {
     @apply border-border;
   }
@@ -136,6 +137,41 @@ All colors MUST be HSL.
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* LED Strip Animation for Input */
+  .led-strip-glow {
+    position: relative;
+    border-radius: 0.375rem;
+  }
+
+  .led-strip-glow::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      transparent 25%,
+      hsl(var(--primary)) 50%, 
+      transparent 75%,
+      transparent 100%
+    );
+    background-size: 300% 100%;
+    border-radius: 0.5rem;
+    z-index: -1;
+    animation: led-flow 9s linear infinite;
+  }
+
+  @keyframes led-flow {
+    0% {
+      background-position: -300% 0;
+    }
+    100% {
+      background-position: 300% 0;
     }
   }
 }

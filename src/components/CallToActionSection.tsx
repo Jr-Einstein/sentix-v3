@@ -11,7 +11,7 @@ export const CallToActionSection = () => {
             <Rocket className="h-12 w-12 text-primary mr-4" />
             <h2 className="text-3xl md:text-4xl font-bold">
               <span className="bg-gradient-accent bg-clip-text text-transparent">
-                🚀 Build Your Pentesting Workflow Now
+                Build Your Pentesting Workflow Now
               </span>
             </h2>
           </div>
