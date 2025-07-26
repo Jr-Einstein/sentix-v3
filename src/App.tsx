@@ -10,6 +10,7 @@ import WorkflowDetail from "./pages/WorkflowDetail";
 import Platform from "./pages/Platform";
 import Features from "./pages/Features";
 import Pricing from "./pages/Pricing";
+import Dashboard from "./pages/Dashboard";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/platform" element={<Platform />} />
           <Route path="/features" element={<Features />} />
           <Route path="/pricing" element={<Pricing />} />
