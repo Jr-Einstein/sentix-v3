@@ -177,8 +177,15 @@ export default function WorkflowDetail() {
     <TooltipProvider>
       <div className="min-h-screen bg-background">
         <Navbar />
-        
-        <div className="pt-20">
+        <div className="pt-20">{/* Add padding top for fixed navbar */}
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+            <Breadcrumb 
+              items={[
+                { label: 'Workflows', href: '/workflows' },
+                { label: workflowName || 'Workflow Detail', href: `#` }
+              ]}
+            />
+          </div>
           <div className="container mx-auto px-6 py-12">
             {/* Header Section */}
             <motion.div 

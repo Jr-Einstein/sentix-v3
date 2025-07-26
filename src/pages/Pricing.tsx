@@ -69,8 +69,10 @@ export default function Pricing() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      
-      <div className="pt-20">
+      <div className="pt-20"> {/* Add padding top for fixed navbar */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+          <Breadcrumb showBack={false} />
+        </div>
         {/* Hero Section */}
         <motion.section 
           className="py-20 px-6"
