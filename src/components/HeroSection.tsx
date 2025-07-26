@@ -28,9 +28,9 @@ export const HeroSection = () => {
         }}
       />
       
-      <div className="relative z-10 container mx-auto px-6 py-20 lg:py-32">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-32 max-w-7xl">
         <motion.div 
-          className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]"
+          className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center min-h-[calc(100vh-8rem)] lg:min-h-[75vh]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -50,7 +50,7 @@ export const HeroSection = () => {
 
             {/* Main heading */}
             <motion.h1 
-              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-heading leading-tight"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold font-heading leading-tight"
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
@@ -66,7 +66,7 @@ export const HeroSection = () => {
             
             {/* Subheading */}
             <motion.p 
-              className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-2xl"
+              className="text-lg sm:text-xl lg:text-2xl text-white/80 leading-relaxed max-w-2xl"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.6 }}
@@ -92,7 +92,7 @@ export const HeroSection = () => {
 
             {/* Stats */}
             <motion.div 
-              className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8"
+              className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 pt-6 lg:pt-8"
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 1.0, duration: 0.8 }}
@@ -134,7 +134,7 @@ export const HeroSection = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 min-h-[500px] shadow-2xl">
+            <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-6 lg:p-8 min-h-[400px] sm:min-h-[500px] shadow-2xl">
               {/* Mock terminal/dashboard */}
               <div className="space-y-4">
                 {/* Header */}
