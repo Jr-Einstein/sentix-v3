@@ -150,23 +150,24 @@ All colors MUST be HSL.
     right: -2px;
     bottom: -2px;
     background: linear-gradient(90deg, 
-      transparent, 
-      hsl(var(--primary)), 
-      transparent, 
-      transparent
+      transparent 0%, 
+      transparent 25%,
+      hsl(var(--primary)) 50%, 
+      transparent 75%,
+      transparent 100%
     );
-    background-size: 200% 100%;
+    background-size: 300% 100%;
     border-radius: 0.5rem;
     z-index: -1;
-    animation: led-flow 3s linear infinite;
+    animation: led-flow 9s linear infinite;
   }
 
   @keyframes led-flow {
     0% {
-      background-position: -200% 0;
+      background-position: -300% 0;
     }
     100% {
-      background-position: 200% 0;
+      background-position: 300% 0;
     }
   }
 }
