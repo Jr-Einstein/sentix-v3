@@ -2,13 +2,11 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChatUpload } from "@/components/ChatUpload";
-import { Link } from "react-router-dom";
 import { 
   AlertTriangle, 
   Globe,
   Lock,
-  Zap,
-  ArrowRight
+  Zap
 } from "lucide-react";
 
 export const WorkflowBuilderSection = () => {
@@ -45,7 +43,7 @@ export const WorkflowBuilderSection = () => {
             <ChatUpload />
           </div>
           
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               <Button
                 type="button"
@@ -60,20 +58,12 @@ export const WorkflowBuilderSection = () => {
               
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <AlertTriangle className="h-4 w-4" />
-                <span className="hidden sm:inline">Enterprise-grade security analysis</span>
+                <span>Enterprise-grade security analysis</span>
               </div>
             </div>
             
-            <div className="flex items-center gap-4">
-              <div className="text-sm text-muted-foreground">
-                Powered by n8n & LLM
-              </div>
-              <Link to="/dashboard">
-                <Button variant="hero" className="bg-gradient-to-r from-primary to-blue-500 hover:from-primary/80 hover:to-blue-500/80">
-                  Launch Dashboard
-                  <ArrowRight className="h-4 w-4 ml-2" />
-                </Button>
-              </Link>
+            <div className="text-sm text-muted-foreground">
+              Powered by n8n & LLM
             </div>
           </div>
         </Card>
