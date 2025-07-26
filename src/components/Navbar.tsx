@@ -1,11 +1,45 @@
 import { Shield, Menu, LogIn, UserPlus } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  // Enhanced mobile menu UX
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    const handleEscapeKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsMenuOpen(false);
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('keydown', handleEscapeKey);
+      // Prevent body scroll when menu is open
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleEscapeKey);
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
+
+  // Close menu on route change
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location.pathname]);
 
   return (
     <>
@@ -20,7 +54,11 @@ export const Navbar = () => {
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center space-x-3">
+        <Link 
+          to="/" 
+          className="flex items-center space-x-3 hover:opacity-90 transition-opacity duration-200"
+          aria-label="Go to homepage"
+        >
           <div className="p-2 bg-gradient-hero rounded-lg shadow-glow">
             <Shield className="h-6 sm:h-8 w-6 sm:w-8 text-white" aria-hidden="true" />
           </div>
@@ -30,7 +68,7 @@ export const Navbar = () => {
             </h1>
             <p className="text-xs text-muted-foreground hidden sm:block">Network Pentesting Automation</p>
           </div>
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8" role="navigation">
@@ -103,8 +141,9 @@ export const Navbar = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div 
+            ref={menuRef}
             id="mobile-menu"
-            className="md:hidden mt-4 pb-4 border-t border-border/50 animate-fade-in"
+            className="md:hidden mt-4 pb-4 border-t border-border/50 animate-slide-in-right"
             role="navigation"
             aria-label="Mobile navigation"
           >
