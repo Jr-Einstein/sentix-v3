@@ -198,13 +198,6 @@ export default function WorkflowDetail() {
                 <Badge variant="secondary" className="bg-green-500/20 text-green-400 border-green-500/30">
                   Public Workflow
                 </Badge>
-                <Badge variant="outline" className={
-                  workflow.stats.difficulty === 'Beginner' ? 'border-green-500 text-green-400' :
-                  workflow.stats.difficulty === 'Intermediate' ? 'border-yellow-500 text-yellow-400' :
-                  'border-red-500 text-red-400'
-                }>
-                  {workflow.stats.difficulty}
-                </Badge>
                 {workflow.tags.slice(0, 3).map((tag, index) => (
                   <Badge key={index} variant="outline" className="text-white/70 border-white/20">
                     {tag}
@@ -223,10 +216,6 @@ export default function WorkflowDetail() {
                 <div className="flex items-center gap-2">
                   <Star className="h-4 w-4 fill-yellow-500 text-yellow-500" />
                   <span>{workflow.stats.rating}/5 ({workflow.stats.runs} runs)</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="h-4 w-4" />
-                  <span>{workflow.stats.duration}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Heart className="h-4 w-4" />
@@ -505,14 +494,6 @@ export default function WorkflowDetail() {
                   </CardHeader>
                   <CardContent className="space-y-3 text-sm">
                     <div className="flex justify-between">
-                      <span className="text-white/60">Difficulty:</span>
-                      <span className="text-white">{workflow.stats.difficulty}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-white/60">Duration:</span>
-                      <span className="text-white">{workflow.stats.duration}</span>
-                    </div>
-                    <div className="flex justify-between">
                       <span className="text-white/60">Rating:</span>
                       <span className="text-white">{workflow.stats.rating}/5</span>
                     </div>
@@ -524,36 +505,6 @@ export default function WorkflowDetail() {
                       <span className="text-white/60">Last Updated:</span>
                       <span className="text-white">{workflow.stats.lastUpdated}</span>
                     </div>
-                  </CardContent>
-                </Card>
-
-                {/* Prerequisites */}
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10">
-                  <CardHeader>
-                    <CardTitle className="text-white text-lg flex items-center gap-2">
-                      <AlertTriangle className="h-5 w-5 text-orange-400" />
-                      Prerequisites
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="text-sm text-white/70 space-y-2">
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-400 mt-0.5 flex-shrink-0" />
-                        <span>Basic networking knowledge</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-400 mt-0.5 flex-shrink-0" />
-                        <span>Familiarity with web technologies</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-400 mt-0.5 flex-shrink-0" />
-                        <span>Understanding of security concepts</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-400 mt-0.5 flex-shrink-0" />
-                        <span>Access to testing environment</span>
-                      </li>
-                    </ul>
                   </CardContent>
                 </Card>
 
