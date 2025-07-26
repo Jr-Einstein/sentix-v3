@@ -38,11 +38,12 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
 
-    /* N8N-inspired Brand Colors */
+    /* Cybersecurity Brand Colors */
     --n8n-orange: 20 80% 55%;
     --n8n-purple: 280 60% 45%;
     --cyber-blue: 212 100% 47%;
     --terminal-green: 120 100% 50%;
+    --cyber-red: 0 84% 60%;
     
     /* Gradients - Lovify-inspired */
     --gradient-hero: linear-gradient(135deg, hsl(220 25% 8%) 0%, hsl(280 60% 15%) 50%, hsl(320 50% 20%) 100%);
