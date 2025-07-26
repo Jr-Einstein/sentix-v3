@@ -83,16 +83,6 @@ export const Navbar = () => {
             <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
           </Link>
           <Link 
-            to="/platform" 
-            className={`text-white/90 hover:text-white focus:text-white transition-all duration-200 font-medium text-sm py-2 px-3 rounded-md hover:bg-white/10 relative group ${
-              location.pathname === '/platform' ? 'text-white' : ''
-            }`}
-            aria-label="Learn about our platform"
-          >
-            Platform
-            <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
-          </Link>
-          <Link 
             to="/features" 
             className={`text-white/90 hover:text-white focus:text-white transition-all duration-200 font-medium text-sm py-2 px-3 rounded-md hover:bg-white/10 relative group ${
               location.pathname === '/features' ? 'text-white' : ''
@@ -164,13 +154,6 @@ export const Navbar = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Dashboard
-              </Link>
-              <Link 
-                to="/platform" 
-                className="text-white/90 hover:text-white focus:text-white transition-colors font-medium px-4 py-3 rounded-md hover:bg-white/10"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Platform
               </Link>
               <Link 
                 to="/features" 
