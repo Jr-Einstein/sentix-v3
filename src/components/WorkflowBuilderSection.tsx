@@ -21,7 +21,7 @@ export const WorkflowBuilderSection = () => {
         {/* Transitional Header */}
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground mb-4">
-            Ready to Build Your Workflow?
+            Start Your Automated Pentest with a Click
           </h2>
         </div>
 
@@ -32,7 +32,7 @@ export const WorkflowBuilderSection = () => {
               <Zap className="h-8 w-8 text-orange-500 mr-3" />
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold">
                 <span className="bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
-                  Pentesting Workflow Builder
+                  Try Sentix Now
                 </span>
               </h3>
             </div>
@@ -59,22 +59,9 @@ export const WorkflowBuilderSection = () => {
           </div>
           
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <Button
-                type="button"
-                variant={isPublic ? "default" : "secondary"}
-                size="sm"
-                onClick={() => setIsPublic(!isPublic)}
-                className="bg-secondary hover:bg-secondary/80"
-              >
-                {isPublic ? <Globe className="h-4 w-4 mr-2" /> : <Lock className="h-4 w-4 mr-2" />}
-                {isPublic ? "Public Workflow" : "Private Workflow"}
-              </Button>
-              
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <AlertTriangle className="h-4 w-4" />
-                <span>Enterprise-grade security analysis</span>
-              </div>
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <AlertTriangle className="h-4 w-4" />
+              <span>Enterprise-grade security analysis</span>
             </div>
             
             <Button
@@ -84,10 +71,6 @@ export const WorkflowBuilderSection = () => {
               <Rocket className="h-5 w-5 mr-2" />
               Launch AI Pentest
             </Button>
-          </div>
-          
-          <div className="mt-6 text-center text-sm text-muted-foreground">
-            Powered by n8n Workflows • Google Gemini AI • AWS Infrastructure
           </div>
         </Card>
       </div>
