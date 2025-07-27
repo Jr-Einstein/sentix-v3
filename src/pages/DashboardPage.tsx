@@ -6,11 +6,8 @@ const DashboardPage = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <div className="pt-20">
-        <PentestDashboard 
-          scanTarget="192.168.1.100" 
-          isActive={true} 
-        />
-      </div>
+      <PentestDashboard />
+    </div>
     </div>
   );
 };
